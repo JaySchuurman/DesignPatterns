@@ -14,17 +14,30 @@ namespace ObserverPattern.Displays
         private Subject weatherData;
         public ForecastDisplay(Subject weatherData) 
         { 
-            // Set the field and register itself with the weatherdata subject
+            this.weatherData = weatherData;
+            weatherData.RegisterObserver(this);
         }
         public void Update(float temp, float humidity, float pressure)
         {
-            // Set the correct fields with the relevant parameters
+            this.temperature = temp;
+            this.humidity = humidity;
             Display();
         }
 
         public void Display()
         {
-            // Print a forecast message based on the current temperature and humidity
+            if (temperature > 80)
+            {
+                Console.WriteLine("Forecast: It's going to be hot today! Put on enough sunscreen.");
+            }
+            else if (temperature < 50)
+            {
+                Console.WriteLine("Forecast: It's going to be cold today! Put on your thickest coat.");
+            }
+            else
+            {
+                Console.WriteLine("Forecast: The weather is moderate today. Just like your personality");
+            }
         }
     }
 }
