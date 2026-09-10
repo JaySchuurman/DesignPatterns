@@ -36,7 +36,7 @@ namespace ObserverPattern.Displays
             }
             else
             {
-                Console.WriteLine("Forecast: The weather is moderate today. Just like your personality");
+                Console.WriteLine("Forecast: The weather is moderate today. Just like your personality.");
             }
         }
     }
