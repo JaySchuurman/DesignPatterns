@@ -1,30 +1,21 @@
 ﻿using ObserverPattern.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObserverPattern.Displays
 {
-    internal class ForecastDisplay : Observer, DisplayElement
+    internal class ForecastDisplay : WeatherDisplay
     {
-        private float temperature;
-        private float humidity;
-        private Subject weatherData;
-        public ForecastDisplay(Subject weatherData) 
-        { 
-            this.weatherData = weatherData;
-            weatherData.RegisterObserver(this);
+        public ForecastDisplay(Subject weatherData) : base(weatherData)
+        {
         }
-        public void Update(float temp, float humidity, float pressure)
+
+        public override void Update(float temp, float humidity, float pressure)
         {
             this.temperature = temp;
             this.humidity = humidity;
             Display();
         }
 
-        public void Display()
+        public override void Display()
         {
             if (temperature > 80)
             {
