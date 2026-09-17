@@ -11,7 +11,7 @@ namespace DecoratorPattern.Condiments
     {
         private Beverage _beverage;
 
-        public Lemon(Beverage beverage)
+        public Lemon(Beverage beverage): base(beverage)
         {
             _beverage = beverage;
         }
@@ -23,7 +23,7 @@ namespace DecoratorPattern.Condiments
 
         public override double cost()
         {
-            return _beverage.cost() + 0.15;
+            return 0.15 + base.cost() + _beverage.cost();
         }
     }
 }

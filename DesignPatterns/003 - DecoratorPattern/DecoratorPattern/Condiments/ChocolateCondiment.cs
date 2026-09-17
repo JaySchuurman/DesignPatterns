@@ -9,7 +9,7 @@ namespace DecoratorPattern.Condiments
 {
     internal class ChocolateCondiment : CondimentDecorator
     {
-        public ChocolateCondiment(Beverage beverage)
+        public ChocolateCondiment(Beverage beverage): base(beverage)
         {
             this.baseBeverage = beverage;
         }

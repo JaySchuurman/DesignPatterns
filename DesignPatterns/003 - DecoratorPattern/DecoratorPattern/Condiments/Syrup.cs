@@ -8,13 +8,13 @@ using DecoratorPattern.Beverages;
 namespace DecoratorPattern.Condiments
 {
     internal class Syrup : CondimentDecorator
-    {   public Syrup(Beverage beverage)
+    {   public Syrup(Beverage beverage): base(beverage)
         {
             this.baseBeverage = beverage;
         }
         public override double cost()
         {
-            return 0.50 + baseBeverage.cost();
+            return 0.50 + base.cost() + baseBeverage.cost();
         }
         public override string GetDescription()
         {

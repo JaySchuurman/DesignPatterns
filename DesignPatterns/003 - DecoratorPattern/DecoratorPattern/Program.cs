@@ -18,8 +18,10 @@ namespace DecoratorPattern
             lungo = new Water(lungo);
             PrintBeverage(lungo);
 
-            Beverage macchiato = new Espresso();    
-            macchiato = new SteamedMilk(macchiato);
+            Beverage macchiato = new Espresso();
+            macchiato = new MilkFoam(macchiato);
+            macchiato.Size = Size.VENDI;
+
             PrintBeverage(macchiato);
 
             Beverage correctta = new Espresso();
@@ -151,6 +153,7 @@ namespace DecoratorPattern
             irishCoffee = new EspressoCondiment(irishCoffee);
             irishCoffee = new Whiskey(irishCoffee);
             irishCoffee = new Whip(irishCoffee);
+            irishCoffee.Size = Size.VENDI;
             PrintBeverage(irishCoffee);
         }
 

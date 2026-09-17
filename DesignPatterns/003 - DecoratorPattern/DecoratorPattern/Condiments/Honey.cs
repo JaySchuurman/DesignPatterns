@@ -9,13 +9,13 @@ namespace DecoratorPattern.Condiments
 {
     internal class Honey : CondimentDecorator
     {
-        public Honey(Beverage beverage)
+        public Honey(Beverage beverage): base(beverage)
         {
             this.baseBeverage = beverage;
         }
         public override double cost()
         {
-            return 1.50 + baseBeverage.cost();
+            return 1.50 + base.cost() + baseBeverage.cost();
         }
         public override string GetDescription()
         {
