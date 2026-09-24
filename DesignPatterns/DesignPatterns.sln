@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "Strategy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "002 - ObserverPattern\ObserverPattern\ObserverPattern.csproj", "{C7B6285A-64EC-9A7C-E3AC-17D359820DEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern", "003 - DecoratorPattern\DecoratorPattern\DecoratorPattern.csproj", "{B2744EA2-A5B2-D55F-04AA-4B6C5F4D102F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "003 - DecoratorPattern\DecoratorPattern\FactoryPattern.csproj", "{B2744EA2-A5B2-D55F-04AA-4B6C5F4D102F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
