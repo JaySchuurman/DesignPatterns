@@ -10,7 +10,7 @@ namespace FacadePattern
     {
         public void On()
         {
-
+            Console.WriteLine("Theater lights on");
         }
 
         public void Off()
@@ -20,7 +20,7 @@ namespace FacadePattern
 
         public void Dim(int value)
         {
-
+            Console.WriteLine($"Theater lights dimming to {value}%");
         }
     }
 }
