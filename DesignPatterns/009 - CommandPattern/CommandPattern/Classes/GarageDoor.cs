@@ -37,7 +37,7 @@ namespace CommandPattern.Classes
         public void LightOff()
         {
             Console.WriteLine("Garage door");
-            light.On();
+            light.Off();
         }
     }
 }
