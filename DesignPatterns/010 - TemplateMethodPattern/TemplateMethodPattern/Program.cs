@@ -1,4 +1,5 @@
-﻿using TemplateMethodPattern.CompareTo;
+﻿using TemplateMethodPattern.Beverage.AbstractedBeverages;
+using TemplateMethodPattern.CompareTo;
 
 namespace TemplateMethodPattern
 {
@@ -16,9 +17,11 @@ namespace TemplateMethodPattern
 
             CaffeineBeverage tea = new Tea();
             CaffeineBeverage coffee = new Coffee();
+            CaffeineBeverage chocolateMilk = new ChocolateMilk();
 
             tea.PrepareRecipe();
             coffee.PrepareRecipe();
+            chocolateMilk.PrepareRecipe();
 
             Console.WriteLine("\n\n Now with hooked classes\n\n");
 
